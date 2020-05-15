@@ -14,7 +14,7 @@ commit_website_files() {
 
 upload_files() {
   git remote rm origin
-  git remote add https://dmartinalbo@${GH_TOKEN}@github.com/dmartinalbo/testing-travisci.git > /dev/null 2>&1
+  git remote add origin https://dmartinalbo@${GH_TOKEN}@github.com/dmartinalbo/testing-travisci.git > /dev/null 2>&1
   git push --quiet origin master 
 }
 
