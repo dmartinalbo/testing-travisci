@@ -2,5 +2,7 @@ language: python
 python:
   - "3.6"
 script:
-  - python setup.py bdist_wheel && bash .travis/push.sh
+  - python setup.py bdist_wheel 
+after_success:
+  - bash .travis/push.sh
 
