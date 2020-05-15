@@ -1,6 +1,8 @@
 language: python
 python:
   - "3.6"
-scripts:
-  - python setup.py sdist
+install:
+  - pip install -r requirements.txt
+script:
+  - python setup.py bdist_wheel
 
