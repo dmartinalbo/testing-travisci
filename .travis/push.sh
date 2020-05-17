@@ -7,13 +7,13 @@ setup_git() {
 
 commit_website_files() {
   git checkout master
-  bump2version minor --allow-dirty --verbose --tag-name 'v{new_version}'
+  bump2version minor --allow-dirty --verbose --tag-name 'v{new_version}' --message "[skip ci] Bump to version {new_version}"
 }
 
 upload_files() {
   git remote rm origin
   git remote add origin https://dmartinalbo:${GH_TOKEN}@github.com/dmartinalbo/testing-travisci.git > /dev/null 2>&1
-  git push --quiet origin --tags 
+  git push --quiet origin master --tags 
 }
 
 setup_git
