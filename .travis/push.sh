@@ -7,9 +7,9 @@ setup_git() {
 
 commit_website_files() {
   git checkout master
-  echo "testing" >> foo.txt
-  git add foo.txt
-  git commit -m "Travis did this. Travis build: $TRAVIS_BUILD_NUMBER"
+  echo "I" >> version.txt
+  git add version.txt
+  git commit -m "[skip ci] Integrating. Travis build: $TRAVIS_BUILD_NUMBER"
 }
 
 upload_files() {
