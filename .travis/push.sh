@@ -7,15 +7,13 @@ setup_git() {
 
 commit_website_files() {
   git checkout master
-  echo "I" >> version.txt
-  git add version.txt
-  git commit -m "[skip ci] Integrating. Travis build: $TRAVIS_BUILD_NUMBER"
+  bump2version minor --allow-dirty --verbose --tag-name 'v{new_version}'
 }
 
 upload_files() {
   git remote rm origin
   git remote add origin https://dmartinalbo:${GH_TOKEN}@github.com/dmartinalbo/testing-travisci.git > /dev/null 2>&1
-  git push --quiet origin master 
+  git push --quiet origin --tags 
 }
 
 setup_git

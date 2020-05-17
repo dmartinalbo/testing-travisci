@@ -1,10 +1,13 @@
 language: python
 python:
   - "3.6"
+install:
+  - pip install -r requirements.txt
 script:
-  - python setup.py bdist_wheel 
+  - pytest 
 after_success:
   - bash .travis/push.sh
+  - python setup.py bdist_wheel
 branches:
   only:
     - master
