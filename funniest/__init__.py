@@ -1,2 +1,2 @@
 def joke():
-  return "¿En que se parece...?"
+  return "¿En que se parecen...?"
