@@ -10,7 +10,7 @@ setup_git() {
 
 bump_version() {
   git checkout master
-  bump2version minor --allow-dirty --verbose --tag-name 'v{new_version}' --message "[skip ci] Bump to version {new_version}"
+  bump2version minor --allow-dirty --verbose --tag-name 'v{new_version}' --message "[skip ci] Bump to v{new_version}"
 }
 
 merge() {
