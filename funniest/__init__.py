@@ -1,2 +1,1 @@
-def joke():
-  return "¿En que se parecen...?"
+from funniest import joke
