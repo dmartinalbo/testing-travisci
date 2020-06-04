@@ -2,11 +2,9 @@ language: python
 python:
   - "3.6"
 install:
-  - pip install requests semver
   - pip install -r requirements.txt
 script:
   - pytest 
-after_success:
   - bash .travis/push.sh
   - python setup.py bdist_wheel
 branches:
