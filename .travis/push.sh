@@ -15,7 +15,7 @@ bump_version() {
 
 merge() {
   git checkout -B stable
-  git merge --no-ff -m "[skip ci] merging 'master' into 'stable'" stable 
+  git merge -m "[skip ci] merging 'master' into 'stable'" stable 
 }
 
 push_changes() {
